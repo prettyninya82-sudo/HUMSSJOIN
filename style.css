@@ -1,0 +1,121 @@
+/* ---------- General Page Setup ---------- */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f1ec;  /* soft scrapbook paper background */
+  font-family: Georgia, serif;
+}
+
+/* ---------- Header ---------- */
+header {
+  background-color: #a7c7c5;
+  padding: 20px;
+  text-align: center;
+  border-radius: 0 0 25px 25px;
+}
+.paper {
+  animation: paperFloat 6s ease-in-out infinite;
+}
+
+.scrap-img {
+  background: white;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 6px 6px 0 #c4d6d4;
+  transform: rotate(-2deg);
+}
+
+.scrap-img:hover {
+  transform: rotate(0deg) scale(1.05);
+}
+
+.title-box {
+  background-color: #6b8f8b;
+  color: white;
+  padding: 8px 20px;
+  border-radius: 25px;
+}
+
+.subtitle-box {
+  background-color: #d8e6e4;
+  padding: 6px 18px;
+  border-radius: 20px;
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #eef5f4;  /* soft cream for scrapbook paper */
+  padding: 30px;
+  border-radius: 25px;
+}
+
+/* ---------- Definition List ---------- */
+dl {
+  background-color: white;
+  border: 3px dashed #6b8f8b; /* visible scrapbook border */
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+/* ---------- Scrapbook Section ---------- */
+.scrapbook {
+  background-color: #ffffff;  /* paper-like */
+  padding: 25px;
+  border-radius: 25px;
+  margin-top: 20px;
+  border: 3px dashed #6b8f8b; /* main scrapbook border */
+  box-shadow: 4px 4px 8px #c4d6d4; /* subtle depth */
+}
+
+/* Individual paper notes inside scrapbook */
+.paper {
+  border: 2px dashed #a7c7c5;
+  padding: 20px;
+  border-radius: 20px;
+  margin: 20px 0;
+  background-color: #fff9f2; /* slightly different paper shade */
+  box-shadow: 2px 2px 6px #c4d6d4;
+}
+
+/* Tape on papers */
+.tape {
+  background-color: #f1e3a3;
+  width: 120px;
+  height: 22px;
+  margin: auto;
+  border-radius: 5px;
+}
+/* Flip effect */
+.paper {
+  perspective: 1000px; /* gives 3D depth */
+  margin: 20px 0;
+}
+
+.paper-inner {
+  position: relative;
+  width: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.paper:hover .paper-inner {
+  transform: rotateY(180deg);
+}
+
+.paper-front, .paper-back {
+  position: relative;
+  width: 100%;
+  background-color: #fff9f2;
+  border: 2px dashed #a7c7c5;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 6px #c4d6d4;
+  backface-visibility: hidden;
+}
+
+.paper-back {
+  transform: rotateY(180deg);
+}
+
